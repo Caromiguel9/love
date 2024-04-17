@@ -1,0 +1,69 @@
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.flor {
+    margin-bottom: 0px;
+}
+
+.mensaje {
+    font-family: 'Brush Script MT', cursive; /* Cambia la fuente a una caligráfica */
+    font-size: 20px; /* Aumenta el tamaño de la fuente */
+    color: #22191a; /* Cambia el color del texto a un rojo oscuro */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agrega una sombra suave al texto */
+    margin-bottom: 13px; /* Aumenta el espacio inferior */
+    text-align: center; /* Centra el texto horizontalmente */
+    line-height: 1.5; /* Aumenta el espaciado entre líneas */
+    padding: 20px; /* Agrega un poco de espacio interno */
+    background-color: rgba(255, 255, 255, 0.8); /* Agrega un fondo semitransparente */
+    border-radius: 10px; /* Redondea los bordes */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra suave al fondo */
+  }
+
+
+  .heart {
+    width: 100px; /* Establece el ancho del corazón en 100 píxeles */
+    height: 100px; /* Establece la altura del corazón en 100 píxeles */
+    background-color: #D24D57; /* Define el color de fondo del corazón como un rojo oscuro */
+    position: relative; /* Establece la posición del corazón como relativa, lo que permite posicionar elementos hijos de manera absoluta */
+    transform: rotate(45deg); /* Rota el corazón 45 grados en sentido horario */
+    animation: beat 1s infinite; /* Aplica la animación 'beat' al corazón, con una duración de 1 segundo y repitiendo infinitamente */
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: ""; /* Crea un pseudo-elemento vacío */
+    background-color: #D24D57; /* Define el color de fondo de los pseudo-elementos como un rojo oscuro */
+    border-radius: 50%; /* Establece un radio de borde del 50%, creando una forma circular para los pseudo-elementos */
+    height: 100px; /* Establece la altura de los pseudo-elementos en 100 píxeles */
+    position: absolute; /* Posiciona los pseudo-elementos de manera absoluta con respecto al elemento padre (.heart) */
+    width: 100px; /* Establece el ancho de los pseudo-elementos en 100 píxeles */
+  }
+  
+  .heart:before {
+    top: -50px; /* Posiciona el pseudo-elemento :before 50 píxeles por encima del elemento .heart */
+    left: 0; /* Posiciona el pseudo-elemento :before en el borde izquierdo del elemento .heart */
+  }
+  
+  .heart:after {
+    left: 50px; /* Posiciona el pseudo-elemento :after 50 píxeles a la derecha del borde izquierdo del elemento .heart */
+    top: 0; /* Posiciona el pseudo-elemento :after en la parte superior del elemento .heart */
+  }
+  
+  @keyframes beat {
+    0% {
+      transform: scale(1) rotate(45deg); /* Establece la escala inicial en 1 (tamaño normal) y la rotación en 45 grados */
+    }
+    50% {
+      transform: scale(1.2) rotate(45deg); /* En el 50% de la animación, aumenta la escala a 1.2 (20% más grande) y mantiene la rotación en 45 grados */
+    }
+    100% {
+      transform: scale(1) rotate(45deg); /* Al final de la animación, vuelve a la escala inicial de 1 (tamaño normal) y mantiene la rotación en 45 grados */
+    }
+  }
